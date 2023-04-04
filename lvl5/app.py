@@ -35,6 +35,8 @@ def unlock():
             inputted_code = [int(c) for c in inputted_code.split(' ')] # convert the inputted code into a list of integers
 
             inputted_key = int(request.form['key'])
+            if inputted_key < 2:
+                return '<p>The key must be 2 or greater.</p>'
 
             code_to_match = code.readline()
 
