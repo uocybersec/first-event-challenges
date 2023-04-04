@@ -13,6 +13,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy the application code
 COPY . .
 
+# Generate a vault code
+RUN python generate_code.py
+
 # Expose the port on which the application will run
 EXPOSE 5000
 
